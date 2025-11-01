@@ -282,10 +282,7 @@ if ($firebase_manager_exists) {
                         <?php elseif (!$firebase_status['service_account_valid']): ?>
                             <div class="diagnostic-warning">
                                 <strong>❌ Service Account JSON невалидный</strong><br>
-                                Проверьте формат JSON и обязательные поля.<br><br>
-                                <a href="<?php echo admin_url('admin.php?page=firebase-fix-json'); ?>" class="button button-primary" target="_blank">
-                                    🔧 Загрузить JSON из бэкапа
-                                </a>
+                                Проверьте формат JSON и обязательные поля. Загрузите новый Service Account JSON файл через форму ниже.
                             </div>
                         <?php elseif (!$firebase_status['composer_autoloader_exists']): ?>
                             <div class="diagnostic-warning">

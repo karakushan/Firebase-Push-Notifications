@@ -238,15 +238,6 @@ class Firebase_Push_Notifications
 
         add_submenu_page(
             'firebase-push-notifications',
-            __('Fix JSON', 'firebase-push-notifications'),
-            __('Fix JSON', 'firebase-push-notifications'),
-            'manage_options',
-            'firebase-fix-json',
-            array($this, 'fix_json_page')
-        );
-
-        add_submenu_page(
-            'firebase-push-notifications',
             __('Diagnostics', 'firebase-push-notifications'),
             __('Diagnostics', 'firebase-push-notifications'),
             'manage_options',
@@ -377,14 +368,6 @@ class Firebase_Push_Notifications
     public function firebase_config_page()
     {
         include FIREBASE_PUSH_NOTIFICATIONS_PLUGIN_DIR . 'admin/firebase-config.php';
-    }
-
-    /**
-     * Fix JSON page
-     */
-    public function fix_json_page()
-    {
-        include FIREBASE_PUSH_NOTIFICATIONS_PLUGIN_DIR . 'admin/fix-json.php';
     }
 
     /**
