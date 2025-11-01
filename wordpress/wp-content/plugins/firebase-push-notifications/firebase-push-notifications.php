@@ -6,7 +6,7 @@
  * Description: Firebase Cloud Messaging integration for WordPress with push notifications support for messages, ad expiration, and ad deactivation.
  * Version: 1.0.0
  * Author: Vitaliy Karakushan
- * Author URI: https://github.com/vitaliy-karakushan
+ * Author URI: https://github.com/karakushan/Firebase-Push-Notifications
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: firebase-push-notifications
