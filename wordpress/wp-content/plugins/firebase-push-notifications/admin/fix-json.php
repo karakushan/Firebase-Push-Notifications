@@ -26,7 +26,7 @@ if (!current_user_can('manage_options')) {
     wp_die('Unauthorized');
 }
 
-$backup_file = dirname(dirname(dirname(dirname(__FILE__)))) . '/backups/doska-a50b4-69f034b924dd.json';
+$backup_file = dirname(dirname(dirname(dirname(__FILE__)))) . '/backups/firebase-service-account.json';
 
 echo "<h2>📝 Service Account JSON Fixer</h2>";
 

@@ -1,0 +1,46 @@
+# WordPress
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Composer
+/vendor/
+composer.lock
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Service Account JSON files (contains secrets)
+**/service-account*.json
+**/*-service-account*.json
+**/firebase-service-account.json
+backups/*.json
+
+# Backup files
+backups/
+*.backup
+*.bak
+
+# Log files
+*.log
+*.txt
+!README.md
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Test files (if they contain secrets)
+test-*.php
+*test*.php
+
+# OS files
+.DS_Store
+._*
+

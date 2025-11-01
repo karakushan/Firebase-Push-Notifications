@@ -86,10 +86,10 @@ if (isset($_POST['save_firebase_config'])) {
 
 // Get current settings
 $firebase_enabled = get_option('firebase_enabled', false);
-$project_id = get_option('firebase_project_id', 'doska-a50b4');
-$api_key = get_option('firebase_api_key', 'AIzaSyDC0ovBMM_FJEYhFZjgQXAW6-ljtEQRWjo');
-$messaging_sender_id = get_option('firebase_messaging_sender_id', '927038207069');
-$app_id = get_option('firebase_app_id', '1:927038207069:web:38e3755d76e75b379c49b4');
+$project_id = get_option('firebase_project_id', '');
+$api_key = get_option('firebase_api_key', '');
+$messaging_sender_id = get_option('firebase_messaging_sender_id', '');
+$app_id = get_option('firebase_app_id', '');
 $vapid_key = get_option('firebase_vapid_key', '');
 $service_account_file_path = get_option('firebase_service_account_file_path', '');
 
@@ -327,7 +327,7 @@ if ($firebase_manager_exists) {
                 <label for="firebase_project_id">Firebase Project ID:</label>
                 <input type="text" name="firebase_project_id" id="firebase_project_id" 
                        value="<?php echo esc_attr($project_id); ?>" required>
-                <small>Пример: doska-a50b4</small>
+                <small>Введите ваш Firebase Project ID</small>
             </div>
             
             <div class="form-group">
@@ -412,9 +412,7 @@ if ($firebase_manager_exists) {
         
         <h3>🔗 Полезные ссылки</h3>
         <ul>
-            <li><a href="https://console.firebase.google.com/project/doska-a50b4" target="_blank">Firebase Console</a></li>
-            <li><a href="https://console.firebase.google.com/project/doska-a50b4/settings/serviceaccounts/adminsdk" target="_blank">Service Accounts</a></li>
-            <li><a href="https://console.firebase.google.com/project/doska-a50b4/settings/general" target="_blank">Project Settings</a></li>
+            <li><a href="https://console.firebase.google.com" target="_blank">Firebase Console</a></li>
             <li><a href="<?php echo admin_url('admin.php?page=firebase-test-notifications'); ?>">Тестирование уведомлений</a></li>
             <li><a href="<?php echo get_template_directory_uri(); ?>/includes/firebase-push-notifications/firebase-test.php" target="_blank">🔍 Детальный тест Firebase</a></li>
         </ul>
@@ -422,18 +420,18 @@ if ($firebase_manager_exists) {
         <h3>📋 Инструкции по настройке</h3>
         <ol>
             <li><strong>Включите Firebase</strong> - поставьте галочку в первом поле</li>
-            <li><strong>Проверьте Project ID</strong> - должен быть "doska-a50b4"</li>
+            <li><strong>Введите Project ID</strong> вашего Firebase проекта</li>
             <li><strong>Получите Service Account JSON:</strong>
                 <ul>
-                    <li>Перейдите в <a href="https://console.firebase.google.com/project/doska-a50b4/settings/serviceaccounts/adminsdk" target="_blank">Service Accounts</a></li>
+                    <li>Перейдите в Firebase Console → Project Settings → Service Accounts</li>
                     <li>Нажмите "Generate new private key"</li>
                     <li>Скачайте JSON файл</li>
-                    <li>Скопируйте содержимое в поле "Service Account JSON"</li>
+                    <li>Загрузите файл в поле выше</li>
                 </ul>
             </li>
             <li><strong>Получите VAPID Key:</strong>
                 <ul>
-                    <li>Перейдите в <a href="https://console.firebase.google.com/project/doska-a50b4/settings/cloudmessaging" target="_blank">Cloud Messaging</a></li>
+                    <li>Перейдите в Firebase Console → Project Settings → Cloud Messaging</li>
                     <li>Найдите "Web configuration"</li>
                     <li>Скопируйте "Key pair"</li>
                 </ul>

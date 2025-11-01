@@ -318,7 +318,7 @@ $users_with_tokens = get_users(array(
             
             <h3>🔧 Альтернативные способы тестирования</h3>
             <ul>
-                <li><strong>Firebase Console:</strong> <a href="https://console.firebase.google.com/project/doska-a50b4/messaging" target="_blank">https://console.firebase.google.com/project/doska-a50b4/messaging</a></li>
+                <li><strong>Firebase Console:</strong> <a href="https://console.firebase.google.com" target="_blank">https://console.firebase.google.com</a></li>
                 <li><strong>Прямая отправка:</strong> Используйте FCM токены из админки WordPress</li>
                 <li><strong>Программная отправка:</strong> Через наш WordPress интерфейс (выше)</li>
             </ul>
@@ -330,7 +330,7 @@ $users_with_tokens = get_users(array(
         <ul>
             <li><a href="<?php echo admin_url('profile.php'); ?>">FCM токены в админке WordPress</a></li>
             <li><a href="<?php echo home_url('/my-dashboard/'); ?>">Настройки уведомлений пользователя</a></li>
-            <li><a href="https://console.firebase.google.com/project/doska-a50b4/messaging" target="_blank">Firebase Console - Cloud Messaging</a></li>
+            <li><a href="https://console.firebase.google.com" target="_blank">Firebase Console</a></li>
         </ul>
     </div>
 </body>

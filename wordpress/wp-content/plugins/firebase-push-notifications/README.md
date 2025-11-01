@@ -158,8 +158,7 @@ Use the built-in diagnostics tool:
 ## Support
 
 For support and bug reports, please visit:
-- GitHub Issues: [https://github.com/vitaliy-karakushan/firebase-push-notifications](https://github.com/vitaliy-karakushan/firebase-push-notifications)
-- Email: [vitaliy.karakushan@example.com](mailto:vitaliy.karakushan@example.com)
+- GitHub Issues: [https://github.com/karakushan/Firebase-Push-Notifications](https://github.com/karakushan/Firebase-Push-Notifications)
 
 ## Changelog
 
