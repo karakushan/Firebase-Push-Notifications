@@ -1252,3 +1252,22 @@ input:disabled + .toggle-slider {
     font-size: 16px;
   }
 }
+
+/* Chat Counter Styles - Only for directorypress-panel-sidebar-wrapper */
+#directorypress-panel-sidebar-wrapper .chat-counter {
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  background: #ff4444;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

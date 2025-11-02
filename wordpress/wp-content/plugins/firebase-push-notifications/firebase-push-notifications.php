@@ -299,20 +299,25 @@ function fpn_send_push($user_id, $notification_data = array())
 {
     global $firebase_notifications_instance;
 
+    error_log('Firebase: fpn_send_push called for user ' . $user_id . ' | notification_data keys: ' . (is_array($notification_data) ? implode(', ', array_keys($notification_data)) : 'not array'));
+
     // Validate input
     if (empty($user_id) || !is_numeric($user_id)) {
+        error_log('Firebase: Invalid user_id - ' . $user_id);
         return false;
     }
 
     // Get the notification handler if not already stored
     if (!isset($firebase_notifications_instance)) {
         if (!class_exists('Firebase_Push_Notifications')) {
+            error_log('Firebase: Class Firebase_Push_Notifications does not exist');
             return false;
         }
         $firebase_notifications_instance = Firebase_Push_Notifications::getInstance();
     }
 
     if (!$firebase_notifications_instance) {
+        error_log('Firebase: Failed to get Firebase_Push_Notifications instance');
         return false;
     }
 
@@ -322,6 +327,9 @@ function fpn_send_push($user_id, $notification_data = array())
         return false;
     }
 
-    return $firebase_notifications_instance->send_push_notification($user_id, $notification_data);
+    $result = $firebase_notifications_instance->send_push_notification($user_id, $notification_data);
+    error_log('Firebase: send_push_notification result for user ' . $user_id . ': ' . ($result ? 'success' : 'failed'));
+    
+    return $result;
 }
 // phpcs:enable
