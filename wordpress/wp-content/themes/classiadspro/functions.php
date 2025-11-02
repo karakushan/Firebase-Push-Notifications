@@ -582,7 +582,7 @@ function mailtrap($phpmailer) {
 	$phpmailer->Password = '03a18f3433fc8a';
 }
 
-add_action('phpmailer_init', 'mailtrap'); 
+// add_action('phpmailer_init', 'mailtrap'); 
 
 /**
  * Handle avatar upload during user registration
@@ -2118,7 +2118,7 @@ function classiadspro_advertise_page_scripts()
 		<script>
 			jQuery(document).ready(function($) {
 				// Убеждаемся что рекомендуемый пакет выбран по умолчанию
-				if ($('.advertising-form').length > 0) {
+				if ($('.feature-form').length > 0) {
 					// Принудительно выбираем 3-дневный пакет если ничего не выбрано
 					if (!$('input[name="advertising_period"]:checked').length) {
 						$('input[name="advertising_period"][value="3_days"]').prop('checked', true);
