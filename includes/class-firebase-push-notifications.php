@@ -144,6 +144,11 @@ class Firebase_Push_Notifications
             return;
         }
 
+        // Push permission prompt should be available only for authenticated users.
+        if (!is_user_logged_in()) {
+            return;
+        }
+
         // Firebase SDK
         wp_enqueue_script(
             'firebase-app',

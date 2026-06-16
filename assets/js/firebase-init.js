@@ -684,8 +684,10 @@
   function init() {
     log("Initializing Firebase Push Notifications");
 
-    // Initialize for all users, not just logged in ones
-    log("Initializing for all users");
+    if (!isUserLoggedIn()) {
+      log("User is not logged in, skipping Firebase Push initialization");
+      return;
+    }
 
     // Check if Firebase config is available
     if (typeof firebaseConfig === "undefined") {
